@@ -1,6 +1,7 @@
+<!--eslint-disable-->
 <template>
   <div id="app">
-    <Navbar></Navbar>
+    <Navbar/>
     <main>
       <router-view/>
     </main>
@@ -8,16 +9,16 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
+import Navbar from "@/components/Navbar.vue";
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    Navbar,
-  },
+    Navbar
+  }
 };
 </script>
 
 <style lang="scss">
-  @import '@/assets/css/application.scss';
+@import "@/assets/css/application.scss";
 </style>
