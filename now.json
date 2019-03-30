@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "name": "vue",
+  "name": "vybhavb",
+  "alias":"www.vybhavb.com",
   "builds": [
     {
       "src": "package.json",
@@ -8,6 +9,18 @@
     }
   ],
   "routes": [
+    {
+      "src": "^/js/(.*)",
+      "dest": "/js/$1"
+    },
+    {
+      "src": "^/css/(.*)",
+      "dest": "/css/$1"
+    },
+    {
+      "src": "^/img/(.*)",
+      "dest": "/img/$1"
+    },
     {
       "src": "/service-worker.js",
       "headers": {
@@ -19,7 +32,7 @@
     },
     {
       "src": ".*",
-      "dest": "dist/index.html"
+      "dest": "/index.html"
     }
   ]
 }

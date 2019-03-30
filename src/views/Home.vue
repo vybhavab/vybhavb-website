@@ -16,7 +16,6 @@
                 'a photographer',
                 'a security research enthusist'
               ]"
-              :repeat="Infinity"
               :shuffle="true"
               initial-action="typing"
               :pre-type-delay="70"
