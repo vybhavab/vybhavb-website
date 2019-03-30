@@ -14,7 +14,7 @@
                 'a second year student studying computer science',
                 'full stack programmer',
                 'a photographer',
-                'a security research enthusist'
+                'a security research enthusiast'
               ]"
               :shuffle="true"
               initial-action="typing"
