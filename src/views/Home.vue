@@ -1,3 +1,4 @@
+<!--eslint-disable-->
 <template>
   <div class="home">
     <section class="hero is-primary is-fullheight-with-navbar">
