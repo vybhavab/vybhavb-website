@@ -1,7 +1,7 @@
 [
   {
-    "name":"project1",
-    "description":"desct",
+    "name":"Whenu",
+    "description":"Helps find students things to eat on campus",
     "technologies":{
       "0":{
         "name":"tec0",

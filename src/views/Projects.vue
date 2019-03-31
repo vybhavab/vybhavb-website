@@ -2,8 +2,8 @@
 <template>
   <div class="projects">
     <div class="container">
-      <div class="columns is-multiline is-mobile is-one-quarter">
-        <div class="column" v-for="proj in this.projects">
+      <div class="columns is-multiline is-mobile is-centered">
+        <div class="column is-four-fifths-mobile" v-for="proj in this.projects">
           <div class="card">
             <header class="card-header">
               <p class="card-header-title">
