@@ -42,7 +42,7 @@
       </div>
        <div class="hero-foot">
         <nav class="is-fullwidth">
-          <h1 class="has-text-centered has-text-danger is-size-7">© 2019 vybhavb</h1>
+          <h1 class="has-text-centered has-text-danger is-size-7" style="padding-bottom:20px">© 2019 vybhavb</h1>
         </nav>
       </div>
     </section>
