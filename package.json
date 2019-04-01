@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "test": "echo No tests"
   },
   "dependencies": {
     "ajv": "^6.6.2",
