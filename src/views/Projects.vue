@@ -4,7 +4,7 @@
     <div class="container">
       <div class="columns is-multiline is-mobile is-centered">
         <div class="column is-four-fifths-mobile" v-for="proj in this.projects">
-          <div class="card">
+          <div class="card" style="margin-top:10px">
             <header class="card-header">
               <p class="card-header-title">
                 {{proj.name}}

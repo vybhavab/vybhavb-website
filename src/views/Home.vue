@@ -5,7 +5,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-size-1 is-size-3-mobile">
-            hi! my name is vybhav
+            hi! i'm vybhav
           </h1>
           <h3 class="subtitle is-size-3 is-size-5-mobile">
             i am
@@ -32,12 +32,8 @@
             <a href="mailto:contact@vybhavb.com" class="button is-info">
               contact me
             </a>
+            <router-link to="/projects" class="button" style="margin-left:10px">projects</router-link>
           </div>
-          </br>
-          <div>
-            <p class = "title is-size-3 is-size-6-mobile">or checkout at some <router-link to="/projects" class="has-text-link">Projects</router-link> i've worked on</p>
-          </div>
-
         </div>
       </div>
        <div class="hero-foot">
@@ -56,11 +52,6 @@ export default {
   name: "Home",
   components: {
     VueTyper
-  },
-  data: function(){
-    return{
-      projects: ["p1","p2","p3"]
-    };
   }
 };
 </script>
