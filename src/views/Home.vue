@@ -7,27 +7,19 @@
           <h1 class="title is-size-1 is-size-3-mobile">
             hi! i'm vybhav
           </h1>
-          <h3 class="subtitle is-size-3 is-size-5-mobile">
-            i am
-            <VueTyper
-              :text="[
-                'a second year student majoring in computer science',
+          <vue-typed-js
+              :strings="[
+                'undergrad computer science student',
                 'a full stack developer',
                 'a photographer',
                 'a security research enthusiast',
-                '@vybhavb everywhere online'
+                '<a href=\'https://keybase.io/vybhavb\'>@vybhavb</a> everywhere online'
               ]"
-              :repeat="0"
-              initial-action="typing"
-              :pre-type-delay="70"
-              :type-delay="70"
-              :pre-erase-delay="2000"
-              :erase-delay="250"
-              erase-style="select-all"
-              :erase-on-complete="false"
-              caret-animation="blink"
-            />
-          </h3>
+              :contentType="html">
+              <h3 class="subtitle is-size-3 is-size-5-mobile">
+                i am <span class="typing has-text-link"></span>
+              </h3>
+          </vue-typed-js>
           <div>
             <a href="mailto:contact@vybhavb.com" class="button is-info">
               contact me
@@ -47,11 +39,8 @@
 
 <script>
 // @ is an alias to /src
-import { VueTyper } from "vue-typer";
 export default {
   name: "Home",
-  components: {
-    VueTyper
-  }
+  components: {}
 };
 </script>
