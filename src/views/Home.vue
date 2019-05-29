@@ -30,7 +30,7 @@
       </div>
        <div class="hero-foot">
         <nav class="is-fullwidth">
-          <h1 class="has-text-centered has-text-light is-size-7" style="padding-bottom:20px">© 2019 vybhavb</h1>
+          <h1 class="has-text-centered has-text-light is-size-7" style="padding-bottom:20px">© {{new Date().getFullYear()}} vybhavb</h1>
         </nav>
       </div>
     </section>
