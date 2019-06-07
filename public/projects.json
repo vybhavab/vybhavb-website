@@ -19,8 +19,8 @@
   {
     "name": "blog.vybhavb.com",
     "description": "my personal blog where i write down my thoughts",
-    "linkToSite": "https://vybhavb.com",
-    "linkToSource": "https://github.com/vybhavB/vybhavb",
+    "linkToSite": "https://blog.vybhavb.com",
+    "linkToSource": "https://github.com/vybhavB/vybhavb-blog",
     "technologies": {
       "0": {
         "name": "react.js",
