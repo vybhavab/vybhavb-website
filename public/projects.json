@@ -3,7 +3,7 @@
     "name": "vybhavb.com",
     "description": "my personal portfolio website",
     "linkToSite" : "https://vybhavb.com",
-    "linkToSource":"https://github.com/vybhavB/vybhavb",
+    "linkToSource":"https://github.com/vybhavb/vybhavb",
     "technologies": {
       "0": {
         "name": "vue.js",
@@ -20,7 +20,7 @@
     "name": "blog.vybhavb.com",
     "description": "my personal blog where i write down my thoughts",
     "linkToSite": "https://blog.vybhavb.com",
-    "linkToSource": "https://github.com/vybhavB/vybhavb-blog",
+    "linkToSource": "https://github.com/vybhavb/vybhavb-blog",
     "technologies": {
       "0": {
         "name": "react",
@@ -57,7 +57,7 @@
     "name": "whenU",
     "description": "helps students find where and when they can find their favorite foods",
     "linkToSite": "https://whenu.vybhavb.com",
-    "linkToSource": "https://github.com/vybhavB/Whenu-ui",
+    "linkToSource": "https://github.com/vybhavb/Whenu-ui",
     "technologies": {
       "0": {
         "name": "next.js",
@@ -114,7 +114,7 @@
     "name": "verifAi",
     "description": "a quick way for teachers to take attendence with a click of a button",
     "linkToSite": "",
-    "linkToSource": "https://github.com/vybhavB/verifai",
+    "linkToSource": "https://github.com/vybhavb/verifai",
     "technologies": {
       "0": {
         "name": "kotlin",
