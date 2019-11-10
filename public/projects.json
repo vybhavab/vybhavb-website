@@ -93,23 +93,19 @@
     "linkToSource":"https://github.com/rohittavare/SeizeIt",
     "technologies": {
       "0": {
-        "name": "python",
-        "color": "is-black"
-      },
-      "1": {
         "name": "firebase",
         "color": "is-warning"
       },
-      "2": {
+      "1": {
         "name": "ajax",
         "color": "is-white"
       },
-      "3": {
+      "2": {
         "name": "node.js",
         "color": "is-light"
       }
     },
-    "index": 4
+    "index": 3
   },{
     "name": "verifAi",
     "description": "a quick way for teachers to take attendence with a click of a button",
