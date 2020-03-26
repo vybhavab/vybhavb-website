@@ -1,18 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Karla');
 *{
-  font-family: 'Karla', sans-serif;
-}
-
-.vue-typer .custom.char.typed {
-  color: #5294e2;
-}
-
-.vue-typer .custom.caret.typing {
-  background-color: #CADFEB;
-}
-
-.vue-typer .custom.caret {
-  background-color: #CADFEB;
+  // background-color: #383c4a !important;
 }
 
 .typed-element{
@@ -27,9 +14,4 @@
 
 #projTitle{
   padding-top: 4%;
-}
-
-.tags{
-  display: flex;
-  justify-content: center;
 }

@@ -1,18 +1,30 @@
+
 {
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": "airbnb",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "module",
-    "parser": "babel-eslint"
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
-  "env":{
-    "browser": true
-  },
-  "extends": [
-    "plugin:vue/recommended",
-    "prettier",
-    "prettier/standard"
+  "plugins": [
+    "react"
   ],
-  "plugins": ["vue", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/static-property-placement": 0
   }
 }

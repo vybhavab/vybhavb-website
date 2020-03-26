@@ -1,5 +1,5 @@
 @import '~bulma/sass/utilities/initial-variables';
-
+@import url('https://fonts.googleapis.com/css?family=Karla');
 
 $blueBlack: #7c818c;
 $cream: #383c4a;
@@ -11,6 +11,7 @@ $info: $blueBlack;
 $link: $darkerBlue;
 $warning: $babyBlue;
 // $danger: $silverWings;
+$title-family: "Karla", sans-serif;
 
 
 @import '~bulma/bulma.sass';
