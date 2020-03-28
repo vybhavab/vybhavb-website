@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React from 'react';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import { withRouter } from 'next/router';
 
 
@@ -20,45 +21,43 @@ class Navbar extends React.Component {
   }
 
   toggleMenu = () => {
-    this.setState((prevState) => ({
-      active: !prevState.active,
+    this.setState((prev) => ({
+      isActive: !prev.isActive,
     }));
   }
 
   closeMenu = () => {
     this.setState({
-      active: false,
+      isActive: false,
     });
   }
 
   render() {
     const { isActive } = this.state;
-    const { router: { pathname: route } } = this.props;
     return (
-      <nav id="main-navbar" className="navbar is-primary">
+      <nav id="main-navbar" className="navbar is-dark is-fixed-top">
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
               <a className="navbar-item" role="navigation" onClick={this.closeMenu}>
-                <span className="is-size-5">vybhavb</span>
+                <span className="is-size-5">vb</span>
               </a>
             </Link>
-
-            <a className={classnames('navbar-burger', 'burger', { 'is-active': isActive })} role="navigation" onClick={this.toggleMenu}>
+            <div className={classnames({ 'navbar-burger': true, burger: true, 'is-active': isActive })} role="navigation" onClick={this.toggleMenu}>
               <span />
               <span />
               <span />
-            </a>
+            </div>
           </div>
 
           <div className={classnames('navbar-menu', 'header', { 'is-active': isActive })}>
             <div className="navbar-end">
-              <Link href="/projects">
-                <a className={classnames('navbar-item', { 'is-active': route === '/projects' })} role="navigation" onClick={this.closeMenu}>
+              <Link href="//blog.vybhavb.com">
+                <a className="navbar-item" role="navigation" onClick={this.closeMenu}>
                   blog
                 </a>
               </Link>
-              <Link href="https://blog.vybhavb.com">
+              <Link href="/projects">
                 <a className="navbar-item" role="navigation" onClick={this.closeMenu}>
                   projects
                 </a>

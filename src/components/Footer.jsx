@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer has-background-white">
       <div className="content has-text-centered">
         <p>
-          <a href="https://www.vybhavb.com" className="has-text-black">
+          <a href="https://www.vybhavb.com" className="has-text-dark">
             &copy;
             {' '}
-            { useState((new Date()).getFullYear()) }
+            {(new Date()).getFullYear()}
             {' '}
             vybhavb
           </a>
