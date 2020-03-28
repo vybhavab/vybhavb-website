@@ -35,7 +35,7 @@ class Navbar extends React.Component {
   render() {
     const { isActive } = this.state;
     return (
-      <nav id="main-navbar" className="navbar is-dark is-fixed-top">
+      <nav id="main-navbar" className="navbar is-dark">
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">
@@ -60,6 +60,11 @@ class Navbar extends React.Component {
               <Link href="/projects">
                 <a className="navbar-item" role="navigation" onClick={this.closeMenu}>
                   projects
+                </a>
+              </Link>
+              <Link href="/photos">
+                <a className="navbar-item" role="navigation" onClick={this.closeMenu}>
+                  photos
                 </a>
               </Link>
               <Link href="/resume.pdf">
