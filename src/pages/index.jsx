@@ -1,29 +1,56 @@
 import React from 'react';
-import Typed from 'react-typed';
+// import Typed from 'react-typed';
+import classnames from 'classnames';
+import { connect } from 'react-redux';
+// import PropTypes from 'prop-types';
+import { firstLoad } from '../utils/redux/actions/firstLoad';
 
-export default () => (
-  <section className="hero is-dark is-fullheight-with-navbar">
-    <div className="hero-body">
-      <div className="container">
-        <h1 className="title is-size-2">
-          Hey! I&apos;m Vybhav.
-        </h1>
-        <p className="subtitle">
-          i am&nbsp;
-          <Typed
-            strings={['an undergrad computer science student',
-              'a full stack developer',
-              'a photographer',
-              'a security research enthusiast',
-              '<a href=\'//keybase.io/vybhavb\'>@vybhavb</a> everywhere online']}
-            typeSpeed={40}
-          />
-        </p>
+class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { callGlobalState: true };
+  }
+
+  callFirst = () => {
+    const { callGlobalState } = this.state;
+    const { first } = this.props;
+    if (callGlobalState) {
+      first();
+      this.setState({ callGlobalState: false });
+    }
+  }
+
+  render() {
+    const { shouldDoFade } = this.props;
+    return (
+      <div>
+        <section className="hero is-dark is-large">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className={classnames('title', 'is-size-2', { 'fade-in': shouldDoFade })} onAnimationEnd={this.callFirst}>
+                Hey! I&apos;m Vybhav.
+              </h1>
+              <p className="subtitle">
+                tl;dr:&nbsp;
+                {/* <Typed
+              strings={['i am you', 'you am i']}
+              typeSpeed={40}
+              backSpeed={20}
+            /> */}
+              </p>
+            </div>
+          </div>
+        </section>
+        <div className="container">
+          <h1 className="title">bruh</h1>
+        </div>
       </div>
-    </div>
-    <div className="hero-foot has-text-centered">
-      <h1 className="title is-size-6">scroll down to learn more about me</h1>
-      <br />
-    </div>
-  </section>
-);
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({ shouldDoFade: state.fade });
+
+const mapDispatchToProps = () => ({ first: firstLoad });
+
+export default connect(mapStateToProps, mapDispatchToProps())(Index);

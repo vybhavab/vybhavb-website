@@ -34,8 +34,10 @@ class Navbar extends React.Component {
 
   render() {
     const { isActive } = this.state;
+    const { router: { pathname: route } } = this.props;
+    // { 'is-hidden': (route === '/') }
     return (
-      <nav id="main-navbar" className="navbar is-dark">
+      <nav id="main-navbar" className={classnames('navbar', 'is-dark')}>
         <div className="container">
           <div className="navbar-brand">
             <Link href="/">

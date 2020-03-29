@@ -2,17 +2,21 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import '../assets/css/application.scss';
 
 import Footer from '../components/Footer';
 import Navigation from '../components/Navbar';
+import allReducers from '../utils/redux/reducer';
 
+const store = createStore(allReducers);
 export default class extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <div>
+      <>
         <Head>
           <title>vybhavb</title>
           <meta charSet="utf-8" />
@@ -20,10 +24,12 @@ export default class extends App {
           <meta name="description" hid="description" content="my personal portfolio." />
           <link rel="icon" type="image/png" href="/favicon.ico" />
         </Head>
-        <Navigation />
-        <Component {...pageProps} />
-        <Footer />
-      </div>
+        <Provider store={store}>
+          <Navigation />
+          <Component {...pageProps} />
+          <Footer />
+        </Provider>
+      </>
     );
   }
 }
