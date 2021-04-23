@@ -9,7 +9,7 @@
           </h1>
           <vue-typed-js
               :strings="[
-                'undergrad computer science student',
+                'graduate computer science student',
                 'a full stack developer',
                 'a photographer',
                 'a security research enthusiast',
