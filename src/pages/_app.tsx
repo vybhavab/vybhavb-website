@@ -1,20 +1,18 @@
 import type { AppProps /*, AppContext */ } from 'next/app';
+import Navbar  from '@/components/Navbar';
 
-import '../assets/styles/index.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { Chakra } from "../common/chakra-color-manager"
 
-function Website({ Component, pageProps }: AppProps) {
-  const items = [
-                {
-                    label: "resume",
-                    link:"/Resume.pdf"
-                },
-                {
-                    label:"Other Place"
-                }
-                ];
-  return <> <Navbar items={items}/> <Component {...pageProps} /> <Footer /></>
+const App = ({ Component, pageProps }:AppProps)=> {
+return (
+        <>
+              <Chakra cookies={pageProps.cookies}>
+              <Navbar/>
+              <Component {...pageProps} />
+              </Chakra>
+        </>
+    );
 }
 
-export default Website;
+
+export default App;
