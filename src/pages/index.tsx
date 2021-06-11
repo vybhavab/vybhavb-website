@@ -37,4 +37,4 @@ const Index = () => {
 
 export default Index;
 
-export { getServerSideProps } from "../common/chakra-color-manager";
+//export { getServerSideProps } from "../common/chakra-color-manager";
