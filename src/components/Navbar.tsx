@@ -79,14 +79,14 @@ const Navbar = (): JSX.Element => {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
+              {Links.map((l) => (
+                <NavLink key={l.name + l.link} name={l.name} link={l.link} />
+              ))}
               <IconButton aria-label="toggle dark and light mode"
                           onClick={toggleColorMode}
                           background="none"
                           icon={colorMode === "light" ? <MoonIcon/> : <SunIcon/>}>
               </IconButton>
-              {Links.map((l) => (
-                <NavLink key={l.name + l.link} name={l.name} link={l.link} />
-              ))}
             </HStack>
           </HStack>
         </Flex>
