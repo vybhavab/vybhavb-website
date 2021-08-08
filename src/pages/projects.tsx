@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-export default () => (
+export default ():ReactElement => (
   <div>
     <h1>Projects</h1>
   </div>

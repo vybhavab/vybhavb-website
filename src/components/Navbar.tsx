@@ -1,9 +1,11 @@
 import React from 'react';
 
 import {
-    MoonIcon,
-    SunIcon
-} from '@chakra-ui/icons'
+  MoonIcon,
+  SunIcon,
+  CloseIcon,
+  HamburgerIcon,
+} from '@chakra-ui/icons';
 
 import {
   Box,
@@ -15,45 +17,43 @@ import {
   Stack,
   useColorModeValue,
   useDisclosure,
-  useColorMode
+  useColorMode,
 } from '@chakra-ui/react';
 
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-
 interface LinkElement {
-    name: string,
-    link: string
-};
+  name: string,
+  link: string
+}
 
 const Links: LinkElement[] = [
 
-                {
-                    name: 'resume',
-                    link:'/Resume.pdf'
-                },{
-                    name: 'projects',
-                    link:'/projects'
-                },{
-                    name: 'blog',
-                    link:'https://blog.vybhavb.com'
-                }];
-
+  {
+    name: 'resume',
+    link: '/Resume.pdf',
+  }, {
+    name: 'projects',
+    link: '/projects',
+  }, {
+    name: 'blog',
+    link: 'https://blog.vybhavb.com',
+  }];
 
 const NavLink = (elem:LinkElement) => {
-    return (
-      <Link
-        px={2}
-        py={1}
-        rounded="md"
-        _hover={{
-          textDecoration: 'none',
-          bg: useColorModeValue('gray.200', 'gray.700'),
-        }}
-        href={elem.link}
-      >
-        {elem.name}
-      </Link>
-    );
+  const { link, name } = elem;
+  return (
+    <Link
+      px={2}
+      py={1}
+      rounded="md"
+      _hover={{
+        textDecoration: 'none',
+        bg: useColorModeValue('gray.200', 'gray.700'),
+      }}
+      href={link}
+    >
+      {name}
+    </Link>
+  );
 };
 
 const Navbar = (): JSX.Element => {
@@ -67,7 +67,7 @@ const Navbar = (): JSX.Element => {
           <IconButton
             size="md"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={isOpen ? "Close Menu":"Open Menu"}
+            aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
             display={{ md: 'none' }}
             variant="link"
             onClick={isOpen ? onClose : onOpen}
@@ -82,11 +82,12 @@ const Navbar = (): JSX.Element => {
               {Links.map((l) => (
                 <NavLink key={l.name + l.link} name={l.name} link={l.link} />
               ))}
-              <IconButton aria-label="toggle dark and light mode"
-                          onClick={toggleColorMode}
-                          background="none"
-                          icon={colorMode === "light" ? <MoonIcon/> : <SunIcon/>}>
-              </IconButton>
+              <IconButton
+                aria-label="toggle dark and light mode"
+                onClick={toggleColorMode}
+                background="none"
+                icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              />
             </HStack>
           </HStack>
         </Flex>
@@ -97,9 +98,9 @@ const Navbar = (): JSX.Element => {
           {isOpen ? (
             <Box pb={4} display={{ md: 'none' }}>
               <Stack as="nav" spacing={4}>
-                  {Links.map((l) => (
-                    <NavLink key={l.name+l.link} name={l.name} link={l.link} />
-                  ))}
+                {Links.map((l) => (
+                  <NavLink key={l.name + l.link} name={l.name} link={l.link} />
+                ))}
               </Stack>
             </Box>
           ) : null}

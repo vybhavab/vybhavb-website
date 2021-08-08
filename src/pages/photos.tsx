@@ -1,5 +1,5 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-export default () => (
+export default ():ReactElement => (
   <h1>Hello</h1>
 );
