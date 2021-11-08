@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="hero-body">
-        <div>
+        <div class="container is-fluid">
           <div class="columns box has-text-centered-touch is-vcentered" v-for="proj in projects" v-bind:key="proj.index">
             <div class="column is-one-fifth">
               <h1 class="is-size-4 is-size-5-mobile title">
