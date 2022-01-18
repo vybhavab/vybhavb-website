@@ -21,7 +21,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "postbuild": "next-on-netlify"
+        "export": "npm run build && next export"
     },
     "devDependencies": {
         "@types/node": "^14.14.41",

@@ -13,5 +13,6 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "react/jsx-props-no-spreading": 0,
     }
 }

@@ -29,7 +29,7 @@ const Links: LinkElement[] = [
 
   {
     name: 'resume',
-    link: '/Resume.pdf',
+    link: '/resume.pdf',
   }, {
     name: 'projects',
     link: '/projects',
@@ -38,7 +38,7 @@ const Links: LinkElement[] = [
     link: 'https://blog.vybhavb.com',
   }];
 
-const NavLink = (elem:LinkElement) => {
+const NavLink = (elem: LinkElement) => {
   const { link, name } = elem;
   return (
     <Link
