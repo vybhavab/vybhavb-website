@@ -47,7 +47,7 @@
       </div>
       <div class="hero-foot">
         <nav class="is-fullwidth">
-          <h1 class="has-text-centered has-text-white is-size-7" style="padding-bottom:20px">© {{new Date().getFullYear()}} vybhavb</h1>
+          <h1 class="has-text-centered has-text-white is-size-7" style="padding-bottom:20px">© {{new Date().getFullYear()}} vybhavab</h1>
         </nav>
       </div>
     </section>
@@ -73,7 +73,7 @@ export default {
   methods: {
     fetchProjects() {
       axios.get("/projects.json").then(response => {
-        // console.log(response);
+        console.log(response.data);
         this.projects = response.data;
       });
     }

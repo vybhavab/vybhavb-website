@@ -13,7 +13,7 @@
                 'a full stack developer',
                 'a photographer',
                 'a security research enthusiast',
-                '<a href=\'https://keybase.io/vybhavb\'>@vybhavb</a> everywhere online'
+                '<a href=\'https://keybase.io/vybhavab\'>@VybhavAB</a> everywhere online'
               ]"
               :contentType="html">
               <h3 class="subtitle is-size-3 is-size-5-mobile">
@@ -21,7 +21,7 @@
               </h3>
           </vue-typed-js>
           <div>
-            <a href="mailto:contact@vybhavb.com" class="button is-info">
+            <a href="mailto:vybhavab@gmail.com" class="button is-info">
               contact me
             </a>
             <router-link to="/projects" class="button" style="margin-left:10px">projects</router-link>
@@ -30,7 +30,7 @@
       </div>
        <div class="hero-foot">
         <nav class="is-fullwidth">
-          <h1 class="has-text-centered has-text-light is-size-7" style="padding-bottom:20px">© {{new Date().getFullYear()}} vybhavb</h1>
+          <h1 class="has-text-centered has-text-light is-size-7" style="padding-bottom:20px">© {{new Date().getFullYear()}} vybhavab</h1>
         </nav>
       </div>
     </section>

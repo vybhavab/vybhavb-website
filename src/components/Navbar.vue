@@ -25,6 +25,9 @@
           exact @click.native="closeMenu">
             home
           </router-link>
+          <a class="navbar-item" href="https://blog.vybhavb.com" target="_blank">
+            blog
+          </a>
           <router-link to="/projects" class="navbar-item" active-class="active"
           exact @click.native="closeMenu">
             projects
