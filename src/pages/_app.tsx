@@ -1,15 +1,12 @@
-import Navbar from 'components/Navbar';
 import React, { ReactElement } from 'react';
+import "../assets/css/index.css";
 import type { AppProps } from 'next/app';
-
-import { Chakra } from '../common/chakra-color-manager';
+import Navbar from 'components/Navbar';
 
 const App = ({ Component, pageProps }: AppProps): ReactElement => (
   <>
-    <Chakra cookies={pageProps.cookies}>
-      <Navbar />
-      <Component {...pageProps} />
-    </Chakra>
+    <Navbar />
+    <Component {...pageProps} />
   </>
 );
 

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Hero } from 'components/Hero';
-import Projects from 'components/Projects';
+import Hero from 'components/Hero';
 import { projectData } from 'data/projects'
+import React from 'react';
 
 export async function getStaticProps() {
   return {
@@ -10,12 +9,12 @@ export async function getStaticProps() {
     },
   }
 }
-
+//<Hero />
+//<Projects projects={projects}/>
 const Index = ({projects}) => {
   return (
     <div>
       <Hero />
-      <Projects projects={projects}/>
     </div>
   )
 };
