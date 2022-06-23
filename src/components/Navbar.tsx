@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -24,7 +25,7 @@ const links: LinkElement[] = [
 const getNavbarElements = (pathname: string) => links.map((link) => (
   <li className={classNames('inline-block hover:background active:background', { 'bg-info rounded-lg': pathname === link.link })} key={link.name}>
     <Link href={link.link}>
-      <a className={classNames('text-base text-gray-400 active:bg-base-100', { 'text-info-content': pathname === link.link })}>{link.name}</a>
+      <a className={classNames('text-base text-gray-400 active:bg-base-100', { 'text-info-content': pathname === link.link })} href={link.link}>{link.name}</a>
     </Link>
   </li>
 ));
@@ -35,7 +36,7 @@ const Navbar = (): JSX.Element => {
     <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden swap swap-rotate">
+          <label className="btn btn-ghost lg:hidden swap swap-rotate">
             <input type="checkbox" />
 
             <svg xmlns="http://www.w3.org/2000/svg" className="swap-off fill-current w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,7 +51,7 @@ const Navbar = (): JSX.Element => {
             {getNavbarElements(pathname)}
           </ul>
         </div>
-        <Link href="/"><a className="btn btn-ghost normal-case text-2xl">vb</a></Link>
+        <Link href="/"><a className="btn btn-ghost normal-case text-2xl" href="/">vb</a></Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">

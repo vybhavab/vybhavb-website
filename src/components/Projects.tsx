@@ -1,7 +1,9 @@
-const Project = () => {
-  return (<div className='text-blue-100'>
+import React from 'react';
+
+const Project = (): JSX.Element => (
+  <div className="text-blue-100">
     Test
-  </div>)
-};
+  </div>
+);
 
 export default Project;

@@ -1,18 +1,19 @@
 {
 	"extends": [
 		"plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended",
-		"airbnb-typescript"
+    "plugin:react/recommended",
+		"airbnb-typescript",
+    "plugin:@next/next/recommended"
 	],
-    "parser": "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
 	"parserOptions": {
     	"project": "./tsconfig.json"
 	},
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
-    "rules": {
-      "react/jsx-props-no-spreading": 0
-    }
+  "plugins": [
+      "react",
+      "@typescript-eslint"
+  ],
+  "rules": {
+    "react/jsx-props-no-spreading": 0
+  }
 }
