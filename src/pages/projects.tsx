@@ -1,7 +1,27 @@
 import React, { ReactElement } from 'react';
+import Projects from 'components/Projects';
+import ProjectType from 'types/project.types';
+import projectsData from 'data/projects';
 
-export default ():ReactElement => (
+interface Props {
+  projects: ProjectType[]
+}
+
+const ProjectsPage = ({ projects }:Props):ReactElement => (
   <div>
-    <h1>Projects</h1>
+    {projects.map((project) => (
+      <Projects project={project} key={project.name} />
+    ))}
   </div>
 );
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export async function getStaticProps() {
+  return {
+    props: {
+      projects: projectsData,
+    },
+  };
+}
+
+export default ProjectsPage;
