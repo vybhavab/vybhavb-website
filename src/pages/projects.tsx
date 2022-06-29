@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ProjectsPage = ({ projects }:Props):ReactElement => (
-  <div>
+  <div className="xl:container mx-auto flex flex-wrap place-content-center">
     {projects.map((project) => (
       <Projects project={project} key={project.name} />
     ))}
