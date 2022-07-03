@@ -33,9 +33,8 @@ const mobileHeroContent = (
     {' @'}
     <Link href="https://www.tiktok.com">
       <span className="relative">
-        Tiktok
-        <span className="absolute left-0">TikTok</span>
-        <span className="absolute left-0">TikTok</span>
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen text-[#69C9D0]">TikTok</span>
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[1.5px]  text-[#EE1D52]">TikTok</span>
       </span>
     </Link>
     {' '}
