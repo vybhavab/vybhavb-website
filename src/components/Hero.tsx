@@ -1,30 +1,67 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Typed, { TypedOptions } from 'typed.js';
 
 interface HeroProps {
   heroTitle: string;
+  heroTitleList?: string[];
   heroContent: JSX.Element;
+  mobileHeroContent: JSX.Element;
 }
 
-const Hero = ({ heroTitle, heroContent }: HeroProps): JSX.Element => (
-  <div
-    className="hero bg-base-200"
-    style={{
-      height: 'calc(100vh - 64px)',
-    }}
-  >
-    <div className="hero-content text-center">
-      <div className="max-w-full">
-        <div className="relative invisible lg:visible">
-          <div className="absolute -top-20 left-64 w-72 h-72 bg-cyan-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-heroBlob" />
-          <div className="absolute -top-10 left-1/2 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-heroBlob animation-delay-5000" />
-          <div className="absolute -top-20 right-52 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-heroBlob animation-delay-3000" />
+const Hero = ({
+  heroTitle, heroTitleList, heroContent, mobileHeroContent,
+}: HeroProps): JSX.Element => {
+  const el = useRef<HTMLSpanElement | null>(null);
+  const typed = useRef<Typed | null>(null);
+
+  useEffect(() => {
+    const options:TypedOptions = {
+      strings: heroTitleList,
+      typeSpeed: 50,
+      backSpeed: 50,
+      showCursor: false,
+      smartBackspace: true,
+      shuffle: true,
+      loop: true,
+    };
+
+    // elRef refers to the <span> rendered below
+    if (el && el.current) {
+      typed.current = new Typed(el.current, options);
+    }
+
+    return () => {
+      // Make sure to destroy Typed instance during cleanup
+      // to prevent memory leaks
+      if (typed.current) { typed.current.destroy(); }
+    };
+  });
+
+  return (
+    <div
+      className="hero bg-base-200"
+      style={{
+        height: 'calc(70vh - 64px)',
+      }}
+    >
+      <div className="hero-content flex-col">
+        <div className="w-fit">
+          { (heroTitleList && heroTitleList.length > 0) ? <span className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center" ref={el} /> : <h1 className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center">{heroTitle}</h1>}
+        </div>
+        <div className="md:hidden">
+          { mobileHeroContent }
+        </div>
+        <div className="hidden md:block text-left">
+          {heroContent}
         </div>
 
-        <h1 className="font-extrabold p-2 text-5xl lg:text-9xl drop-shadow-md shadow-white">{heroTitle}</h1>
-        {heroContent}
       </div>
     </div>
-  </div>
-);
+  );
+};
+
+Hero.defaultProps = {
+  heroTitleList: [],
+};
 
 export default Hero;
