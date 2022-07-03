@@ -52,7 +52,7 @@ const Hero = ({
           { mobileHeroContent }
         </div>
         <div className="hidden md:block text-left">
-          {heroContent}
+          { heroContent }
         </div>
 
       </div>

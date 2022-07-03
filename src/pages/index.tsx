@@ -1,14 +1,20 @@
 import Hero from 'components/Hero';
 import Link from 'next/link';
 import React from 'react';
-
+// text-[#69C9D0]
+// text-[#EE1D52]
 const heroContent = (
   <p className="py-6 text-xl">
     Welcome to my home on the internet. I hope you enjoy your stay!
     <br />
     Currently,
-    {' '}
-    <Link href="https://www.tiktok.com">@Tiktok</Link>
+    {' @'}
+    <Link href="https://www.tiktok.com">
+      <span className="relative">
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen text-[#69C9D0]">TikTok</span>
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[1.5px]  text-[#EE1D52]">TikTok</span>
+      </span>
+    </Link>
     {' '}
     helping build
     {' '}
@@ -24,8 +30,14 @@ const heroContent = (
 const mobileHeroContent = (
   <p className="py-6 text-md">
     Welcome to my home on the internet. Currently I&apos;m working
-    {' '}
-    <Link href="https://www.tiktok.com">@Tiktok</Link>
+    {' @'}
+    <Link href="https://www.tiktok.com">
+      <span className="relative">
+        Tiktok
+        <span className="absolute left-0">TikTok</span>
+        <span className="absolute left-0">TikTok</span>
+      </span>
+    </Link>
     {' '}
     building out
     {' '}
