@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-const AboutMe = () => (
+const AboutMe = ():ReactElement => (
   <div>
     <h1 className="text-xl md:text-3xl py-11">Wait who are you?</h1>
     <p>

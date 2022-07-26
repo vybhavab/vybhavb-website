@@ -49,7 +49,7 @@ const Navbar = (): JSX.Element => {
             {getNavbarElements(pathname)}
           </ul>
         </div>
-        <Link href="/"><a className="btn btn-ghost normal-case text-2xl" href="/">vb</a></Link>
+        <Link href="/"><button type="button" className="btn btn-ghost normal-case text-2xl">vb</button></Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
