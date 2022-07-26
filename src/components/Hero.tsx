@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Typed, { TypedOptions } from 'typed.js';
 
 interface HeroProps {
@@ -17,36 +17,34 @@ const Hero = ({
   useEffect(() => {
     const options:TypedOptions = {
       strings: heroTitleList,
-      typeSpeed: 50,
-      backSpeed: 50,
+      typeSpeed: 70,
+      backSpeed: 100,
       showCursor: false,
-      smartBackspace: true,
       shuffle: true,
       loop: true,
+      backDelay: 500,
     };
 
-    // elRef refers to the <span> rendered below
     if (el && el.current) {
       typed.current = new Typed(el.current, options);
     }
 
     return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
       if (typed.current) { typed.current.destroy(); }
     };
   });
 
   return (
     <div
-      className="hero bg-base-200"
-      style={{
-        height: 'calc(70vh - 64px)',
-      }}
+      className="hero bg-base-200 h-64 md:h-96"
     >
       <div className="hero-content flex-col">
         <div className="w-fit">
-          { (heroTitleList && heroTitleList.length > 0) ? <span className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center" ref={el} /> : <h1 className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center">{heroTitle}</h1>}
+          {
+            (heroTitleList && heroTitleList.length > 0)
+              ? <span className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center" ref={el}>{heroTitle}</span>
+              : <h1 className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center">{heroTitle}</h1>
+          }
         </div>
         <div className="md:hidden">
           { mobileHeroContent }

@@ -1,8 +1,9 @@
-import Hero from 'components/Hero';
-import Link from 'next/link';
 import React from 'react';
-// text-[#69C9D0]
-// text-[#EE1D52]
+import Hero from 'components/Hero';
+import AboutMe from 'components/AboutMe';
+import Link from 'next/link';
+import heroTitleMultiLanguage from 'data/indexLanguages';
+
 const heroContent = (
   <p className="py-6 text-xl">
     Welcome to my home on the internet. I hope you enjoy your stay!
@@ -12,96 +13,60 @@ const heroContent = (
     <Link href="https://www.tiktok.com">
       <span className="relative">
         <span className="font-bold mix-blend-multiply dark:mix-blend-screen text-[#69C9D0]">TikTok</span>
-        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[1.5px]  text-[#EE1D52]">TikTok</span>
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[-0.5px]  text-[#EE1D52]">TikTok</span>
       </span>
     </Link>
     {' '}
     helping build
     {' '}
-    <Link href="https://effecthouse.tiktok.com"><a href="https://effecthouse.tiktok.com" className="text-emerald-400">Effect House</a></Link>
+    <Link href="https://effecthouse.tiktok.com"><a href="https://effecthouse.tiktok.com" className="text-info">Effect House</a></Link>
     .
     <br />
-    If you&apos;d like to chat find me anywhere @vybhavab or send me an
+    If you&apos;d like to chat find me anywhere
     {' '}
-    <Link href="mailto:vybhavab@gmail.com"><a href="mailto:vybhavab@gmail.com" className="text-info">email</a></Link>
+    <Link href="https://keybase.io/vybhavab"><button type="button" className="text-info">@vybhavab</button></Link>
+    {' '}
+    or send me an
+    {' '}
+    <Link href="mailto:vybhavab@gmail.com"><button type="button" className="text-info">email</button></Link>
   </p>
 );
 
 const mobileHeroContent = (
   <p className="py-6 text-md">
-    Welcome to my home on the internet. Currently I&apos;m working
+    Welcome to my home on the internet. Currently I&apos;m
     {' @'}
     <Link href="https://www.tiktok.com">
       <span className="relative">
         <span className="font-bold mix-blend-multiply dark:mix-blend-screen text-[#69C9D0]">TikTok</span>
-        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[1.5px]  text-[#EE1D52]">TikTok</span>
+        <span className="font-bold mix-blend-multiply dark:mix-blend-screen absolute left-[1.7px] top-[-0.5px]  text-[#EE1D52]">TikTok</span>
       </span>
     </Link>
     {' '}
     building out
     {' '}
-    <Link href="https://effecthouse.tiktok.com"><a href="https://effecthouse.tiktok.com" className="text-emerald-400">Effect House</a></Link>
-    If you&apos;d like to get in touch find me anywhere @vybhavab or send me an
+    <Link href="https://effecthouse.tiktok.com"><a href="https://effecthouse.tiktok.com" className="text-info">Effect House</a></Link>
+    {'. '}
+    Wanna talk? Find me anywhere
     {' '}
-    <Link href="mailto:vybhavab@gmail.com">email </Link>
+    <Link href="https://keybase.io/vybhavab"><button type="button" className="text-info">@vybhavab</button></Link>
+    {' '}
+    or send me an
+    {' '}
+    <Link href="mailto:vybhavab@gmail.com"><button type="button" className="text-info">email</button></Link>
   </p>
 );
 
 const Index = (): JSX.Element => (
   <div>
     <Hero
-      heroTitle="Hey there!"
-      heroTitleList={
-        [
-          'Pershëndetje Botë',
-          'أهلاً بالعالم',
-          'Ahoj Světe!',
-          'Здравей, свят!',
-          'ជំរាបសួរ ពិភពលោក',
-          '你好世界',
-          'Hej, Verden!',
-          'Hallo, wereld!',
-          'Hello World!',
-          'Salut le Monde!',
-          'Hallo Welt!',
-          'Γεια σου κόσμε!',
-          'שלום עולם',
-          'नमस्ते दुनिया',
-          'Helló világ!',
-          'Halló heimur!',
-          'Ndewo Ụwa',
-          'Ciao Mondo!',
-          'こんにちは、 世界！',
-          'ಹಲೋ ವರ್ಲ್ಡ್',
-          '반갑다 세상아',
-          'Moien Welt!',
-          'Hallo verden!',
-          '!سلام دنیا',
-          'Witaj świecie!',
-          'Olá, mundo!',
-          'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਦੁਨਿਆ',
-          'Salut lume!',
-          'Ahoj, svet!',
-          '¡Hola mundo!',
-          'Hallå världen!',
-          'Kamusta mundo!',
-          'ஹலோ உலகம்',
-          'హలో వరల్డ్',
-          'હેલો વર્લ્ડ',
-          'สวัสดีโลก!',
-          'Merhaba Dünya!',
-          'Привiт, свiте!',
-          'ہیلو دنیا والو',
-          'Xin chào thế giới',
-        ]
-      }
+      heroTitle="Hello World!"
+      heroTitleList={heroTitleMultiLanguage}
       heroContent={heroContent}
       mobileHeroContent={mobileHeroContent}
     />
     <div className="container mx-auto px-4">
-      <div>
-        <h1 className="text-xl md:text-3xl py-11">While you&apos;re here, how about checking out some stuff I&apos;ve done?</h1>
-      </div>
+      <AboutMe />
     </div>
   </div>
 );
