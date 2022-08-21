@@ -12,7 +12,7 @@ const AboutMe = ():ReactElement => (
       {' '}
       or drinking some coffee (aeropress ftw).
       {' '}
-      Currently, Im working with everything on the web and dabbling in
+      Currently, I&apos;m working with everything on the web and dabbling in
       {' '}
       Go, WASM and distributed computing.
     </p>

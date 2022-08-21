@@ -66,7 +66,11 @@ const Index = (): JSX.Element => (
       mobileHeroContent={mobileHeroContent}
     />
     <div className="container mx-auto px-4">
-      <AboutMe />
+      <div className="flex">
+        <div>
+          <AboutMe />
+        </div>
+      </div>
     </div>
   </div>
 );

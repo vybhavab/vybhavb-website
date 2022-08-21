@@ -1,5 +1,4 @@
 const heroTitlesMultiLanguage = [
-  'Hello World!',
   'Pershëndetje Botë!',
   'أهلاً بالعالم',
   'Ahoj Světe!',
