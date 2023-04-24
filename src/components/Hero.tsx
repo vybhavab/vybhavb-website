@@ -39,11 +39,11 @@ const Hero = ({
       className="hero bg-base-200 h-64 md:h-96"
     >
       <div className="hero-content flex-col">
-        <div className="w-fit">
+        <div className="w-fit will-change-contents">
           {
             (heroTitleList && heroTitleList.length > 0)
-              ? <span className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center" ref={el}>{heroTitle}</span>
-              : <h1 className="font-extrabold p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center">{heroTitle}</h1>
+              ? <span className="font-extrabold will-change-contents p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center" ref={el}>{heroTitle}</span>
+              : <h1 className="font-extrabold will-change-contents p-2 text-4xl lg:text-8xl drop-shadow-md shadow-white text-center">{heroTitle}</h1>
           }
         </div>
         <div className="md:hidden">

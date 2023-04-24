@@ -13,9 +13,6 @@ interface LinkElement {
 const links: LinkElement[] = [
 
   {
-    name: 'resume',
-    link: '/resume.pdf',
-  }, {
     name: 'projects',
     link: '/projects',
   }, {

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import Hero from 'components/Hero';
 import AboutMe from 'components/AboutMe';
 import Link from 'next/link';
 import heroTitleMultiLanguage from 'data/indexLanguages';
+import { AboutMeEnum } from 'types/aboutme.types';
 
 const heroContent = (
   <p className="py-6 text-xl">
@@ -67,8 +68,13 @@ const Index = (): JSX.Element => (
     />
     <div className="container mx-auto px-4">
       <div className="flex">
-        <div>
+        <div className="flex-1 w-1/2">
           <AboutMe />
+        </div>
+        <div className="flex-1 w-1/2">
+          <div className={getViewBg}>
+            test
+          </div>
         </div>
       </div>
     </div>

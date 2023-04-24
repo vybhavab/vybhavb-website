@@ -1,21 +1,18 @@
 import Link from 'next/link';
 import React, { ReactElement } from 'react';
 
+// interface AboutMeProps {
+// }
+
 const AboutMe = ():ReactElement => (
-  <div>
-    <h1 className="text-xl md:text-3xl py-11">Wait who are you?</h1>
-    <p>
-      I&apos;m a software engineer based out of California and I enjoy making things go fast.
-      When I&apos;m not coding, I&apos;m taking some
-      {' '}
-      <Link href="/photos">photos</Link>
-      {' '}
-      or drinking some coffee (aeropress ftw).
-      {' '}
-      Currently, I&apos;m working with everything on the web and dabbling in
-      {' '}
-      Go, WASM and distributed computing.
-    </p>
+  <div className="flex flex-col items-center justify-center">
+    <div className="xl:container mx-auto flex flex-wrap">
+      <h1 className="text-xl md:text-3xl py-3">So who are you?</h1>
+      <p className="text-l">
+        I&apos;m a software enginner, photographer and coffee snob (love me my aeropress) based out of California.
+
+      </p>
+    </div>
   </div>
 );
 
