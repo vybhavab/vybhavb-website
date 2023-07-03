@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from 'react';
+import React, {} from 'react';
 import Hero from 'components/Hero';
 import AboutMe from 'components/AboutMe';
 import Link from 'next/link';
 import heroTitleMultiLanguage from 'data/indexLanguages';
-import { AboutMeEnum } from 'types/aboutme.types';
+import {} from 'types/aboutme.types';
 
 const heroContent = (
   <p className="py-6 text-xl">
