@@ -72,7 +72,7 @@ const Index = (): JSX.Element => (
           <AboutMe />
         </div>
         <div className="flex-1 w-1/2">
-          <div className={getViewBg}>
+          <div>
             test
           </div>
         </div>
