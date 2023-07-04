@@ -1,18 +1,14 @@
 import React, { ReactElement } from 'react';
 
-// interface AboutMeProps {
-// }
-
 const AboutMe = ():ReactElement => (
-  <div className="flex flex-col items-center justify-center">
-    <div className="xl:container mx-auto flex flex-wrap">
-      <h1 className="text-xl md:text-3xl py-3">So who are you?</h1>
-      <p className="text-l">
-        I&apos;m a software enginner, photographer and&nbsp;
-        coffee snob (love me my aeropress) based out of California.
-
-      </p>
-    </div>
+  <div>
+    <h1 className="text-xl lg:text-2xl">What I&apos;m up to</h1>
+    <ul className="list-disc list-inside">
+      <li>creating exciting tools for users on effect house</li>
+      <li>building fun webapps</li>
+      <li>capturing memories through photography</li>
+      <li>experimenting with new coffee brewing systems</li>
+    </ul>
   </div>
 );
 

@@ -13,8 +13,8 @@ interface LinkElement {
 const links: LinkElement[] = [
 
   {
-    name: 'projects',
-    link: '/projects',
+    name: 'resume',
+    link: '/resume.pdf',
   }, {
     name: 'blog',
     link: 'https://blog.vybhavb.com',

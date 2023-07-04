@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Project = ({ project }: Props): JSX.Element => (
-  <div className="card w-96 bg-base-300 shadow-xl m-2">
+  <div className="card w-96 md:w-1/3 bg-base-300 shadow-xl m-2">
     <div className="card-body">
       <h2 className="card-title">{project.name}</h2>
       <p>{project.description}</p>

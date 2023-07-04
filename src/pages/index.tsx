@@ -1,9 +1,11 @@
-import React, {} from 'react';
+import React, { useMemo } from 'react';
 import Hero from 'components/Hero';
 import AboutMe from 'components/AboutMe';
 import Link from 'next/link';
 import heroTitleMultiLanguage from 'data/indexLanguages';
 import {} from 'types/aboutme.types';
+import projectData from 'data/projects';
+import ProjectsPage from './projects';
 
 const heroContent = (
   <p className="py-6 text-xl">
@@ -58,27 +60,27 @@ const mobileHeroContent = (
   </p>
 );
 
-const Index = (): JSX.Element => (
-  <div>
-    <Hero
-      heroTitle="Hello World!"
-      heroTitleList={heroTitleMultiLanguage}
-      heroContent={heroContent}
-      mobileHeroContent={mobileHeroContent}
-    />
-    <div className="container mx-auto px-4">
-      <div className="flex">
-        <div className="flex-1 w-1/2">
-          <AboutMe />
-        </div>
-        <div className="flex-1 w-1/2">
-          <div>
-            test
-          </div>
-        </div>
+const Index = (): JSX.Element => {
+  const filteredData = useMemo(
+    () => projectData.filter((project) => project.visible), [projectData],
+  );
+  return (
+    <div>
+      <Hero
+        heroTitle="Hello World!"
+        heroTitleList={heroTitleMultiLanguage}
+        heroContent={heroContent}
+        mobileHeroContent={mobileHeroContent}
+      />
+      <div className="container mx-auto py-4">
+        <AboutMe />
+      </div>
+      <div className="container mx-auto py-12">
+        <h1 className="text-xl lg:text-2xl">Things I&apos;ve built/helped build</h1>
+        <ProjectsPage projects={filteredData} />
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Index;
